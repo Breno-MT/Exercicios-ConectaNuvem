@@ -1,0 +1,48 @@
+body {
+    height: 1000px;
+    background-color: #5e5d6b;
+}
+img.imgEtexto {
+    width: 860px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+
+}
+h1,p.imgEtexto {
+    text-align: center;
+    margin-left: 10%;
+    padding-left: 10%;
+    text-align: center;
+    
+}
+h1.imgEtexto {
+    color: #d4a7a7;
+}
+p.imgEtexto {
+    color: #9bc9d2;
+}
+
+span.row {
+    display: inline-block; /* the default for span */
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid blue;  
+    background-color: yellow;
+}
+  
+span.row2{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid blue;    
+    background-color: yellow; 
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}

@@ -1,0 +1,15 @@
+body {
+    background-color: grey;
+    color: black;
+    font: normal 20px arial;
+}
+
+#area {
+    background-color: brown;
+    font: arial ;
+    font-size: 20px;
+    color: white;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+}

@@ -44,7 +44,7 @@ class Produto {
             
             let imgEdit = document.createElement('img');
             imgEdit.src="./iconsHTML/editIcon.png";
-            imgEdit.setAttribute("onclick");
+            //imgEdit.setAttribute("onclick");
             td_acoes.appendChild(imgEdit);
             
             if (imgEdit && imgEdit.style){

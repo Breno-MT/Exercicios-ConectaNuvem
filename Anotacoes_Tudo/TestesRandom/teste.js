@@ -1,17 +1,28 @@
-class Cliente {
-    constructor (cpf) {
-        this.cpf = cpf;
+class Transacoes {
+    constructor(conta, valorDaTransacao, numeroDaConta) {
+      this.conta = conta;
+      this.valorDaTransacao = valorDaTransacao;
+      this.idDeTransferencia = 1;
+      this.data = new Date();
+      this.numeroDaConta = numeroDaConta;
     }
-
-    validarCPF(cpf) {
-        
-        if (cpf.length == 11) {
-            console.log("Seu CPF foi validado")
-        } else if (cpf.length != 11 && cpf) {
-            console.log("Seu CPF não é valido!")
-        }
-
+  
+    get transferencia() {
+      return this.fazerTransferencia();
     }
-}
-
-var Teste = new Cliente(12345678910).validarCPF();
+  
+    fazerTransferencia() {
+      return `Transferencia feita, novo saldo: ${(this.conta -= this.valorDaTransacao)}`;
+    }
+  
+    get deposito() {
+      return this.fazerDeposito();
+    }
+  
+    fazerDeposito() {
+      this.idDeTransferencia++;
+      return `Deposito feito, novo saldo: ${(this.conta += this.valorDaTransacao)} ID da transação: ${
+        this.idDeTransferencia
+      } na data: ${this.data}`;
+    }
+  }

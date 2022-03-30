@@ -1,19 +1,19 @@
 export class Pessoa {
-    #_cpf
+    #PrivCPF
     constructor(nome, cpf) {
         this.nome = nome;
-        this.#_cpf = cpf;
+        this.#PrivCPF = cpf;
     }
 
     set #cpf(cpf) {
-        this.#_cpf = cpf;
+        this.#PrivCPF = cpf;
     }
     
     get #cpf(){
-        return this.#_cpf;
+        return this.#PrivCPF;
     }
 
     imprime() {
-        console.log(`Nome: "${this.nome}" e o seu CPF: "${this.#cpf}"`)
+        console.log(`Nome: "${this.nome}" e o seu CPF: "${this.#PrivCPF}"`)
     }
 }

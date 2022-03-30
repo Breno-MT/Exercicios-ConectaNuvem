@@ -87,9 +87,9 @@ const vet = [1,2,3,4,5,6,7,8,9];
 // }, 0);
 
 // acc = acumulador
-// const result = vet.reduce((acc,item) => acc + item, 0);
+//const result = vet.reduce((acc,item) => acc + item, 0);
 
-// console.log(result)
+//console.log(result)
 
 // const produtos = [
 //   {nome: 'batata', qtd: 2, preco: 4},

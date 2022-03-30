@@ -46,26 +46,36 @@ const objUm = {
 // renomeando um item de objeto
 // pegando item com nome certo
 // pegando restante dos itens
-const { nome, idade, ...sobrou} = objUm;
-console.log(nome, idade, sobrou);
+// const { nome, idade, ...sobrou} = objUm;
+// console.log(nome, idade, sobrou);
 
-const vet = [1,2,3,4,5];
+// const vet = [1,2,3,4,5];
 
-const[a, b, ...blau] = vet;
+// const[a, b, ...blau] = vet;
 
-console.log(a, b, blau);
+// console.log(a, b, blau);
 
-function apresentaP({nome, idade, prof}) {
+// function apresentaP({nome, idade, prof}) {
 
-    console.log(`${nome}, ${idade}, ${prof}`)
-}
+//     console.log(`${nome}, ${idade}, ${prof}`)
+// }
 
-apresentaP(objUm);
+// apresentaP(objUm);
 
-const complex = {
-    //nomeEx: 'Juliana',
-    itens: {key: 'chave'}
-}
+// const complex = {
+//     //nomeEx: 'Juliana',
+//     itens: {key: 'chave'}
+// }
 
-const {nomeEx = 'Breno', itens : {key} } = complex;
-console.log(nomeEx, key)
+// const {nomeEx = 'Breno', itens : {key} } = complex;
+// console.log(nomeEx, key)
+
+
+// const prods = [
+//     {nome: 'batata', preco: 4},
+//     {nome: 'feijão', preco: 15},
+// ]
+
+// const [{nome: a, preco}, bar] = prods;
+
+// console.log(a, preco, bar);

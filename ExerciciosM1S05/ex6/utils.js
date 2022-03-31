@@ -1,5 +1,5 @@
-export default function concatena(conc, vetUm, ...random) {
+export function concatena(vetUm, vetDois) {
 
-    return conc.concat(vetUm,random)
+    return [...vetUm, ...vetDois]
 
 }

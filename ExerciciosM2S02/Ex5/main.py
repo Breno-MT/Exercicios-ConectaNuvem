@@ -25,7 +25,7 @@ def main_menu():
 
 
 vogal = ['a','e','i','o','u']
-consoante = ['b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x','y','z']
+# consoante = ['b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x','y','z']
 
 def vogal_consoante():
 
@@ -42,7 +42,7 @@ def vogal_consoante():
     if a in vogal:
         print(f'Sua letra -> {a} <-  é uma vogal!')
         print('-*-'*6)
-    if a in consoante:
+    if a not in vogal:
         print(f'Sua letra -> {a} <- é uma consoante!')
         print('-*-'*6)
 

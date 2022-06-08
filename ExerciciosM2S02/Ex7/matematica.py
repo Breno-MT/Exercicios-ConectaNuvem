@@ -7,7 +7,6 @@ def multiplicar(a,b):
     return a * b
 
 def subtrair(a,b):
-
     print("-*-"*6)
     return a - b
 
@@ -16,7 +15,7 @@ def divisao(a,b):
     try:
         return a / b
     except ZeroDivisionError as e:
-        print(f"Não tente dividir por 0! {e}")
+        print(f"Não tente dividir por 0! Erro: {e}")
     except:
         print("Tente novamente.")
     print("-*-"*6)

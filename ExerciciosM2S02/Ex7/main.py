@@ -1,6 +1,6 @@
 import sys
 from time import sleep
-
+import matematica as mate
 
 def main_menu():
     while True:
@@ -21,22 +21,22 @@ def main_menu():
         if option == 1:
             num1 = int(input("Digite um número inteiro 1 -> "))
             num2 = int(input("Digite um número inteiro 2 -> "))
-            print(somar(num1, num2))
+            print(mate.somar(num1, num2))
 
         elif option == 2:
             num1 = int(input("Digite um número inteiro 1 -> "))
             num2 = int(input("Digite um número inteiro 2 -> "))
-            print(subtrair(num1, num2))
+            print(mate.subtrair(num1, num2))
 
         elif option == 3:
             num1 = int(input("Digite um número inteiro 1 -> "))
             num2 = int(input("Digite um número inteiro 2 -> "))
-            print(divisao(num1, num2))
+            print(mate.divisao(num1, num2))
 
         elif option == 4:
             num1 = int(input("Digite um número inteiro 1 -> "))
             num2 = int(input("Digite um número inteiro 2 -> "))
-            print(multiplicar(num1, num2))
+            print(mate.multiplicar(num1, num2))
 
         elif option == 5:
             print("Fim do programa.")
@@ -44,31 +44,5 @@ def main_menu():
 
         else:
             print("Digite uma opção válida!")
-
-def somar(a,b):
-    print("-*-"*6)
-    return a + b
-
-def multiplicar(a,b):
-    print("-*-"*6)
-    return a * b
-
-def subtrair(a,b):
-
-    print("-*-"*6)
-    return a - b
-
-def divisao(a,b):
-    print("-*-"*6)
-    try:
-        return a / b
-    except ZeroDivisionError as e:
-        print(f"Não tente dividir por 0! {e}")
-    except:
-        print("Tente novamente.")
-    print("-*-"*6)
-
-
-
 
 main_menu()

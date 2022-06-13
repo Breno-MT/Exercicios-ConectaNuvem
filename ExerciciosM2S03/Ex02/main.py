@@ -12,8 +12,6 @@ def check_in():
     if string1 and string2 not in string_total:
         print("Por algum motivo, as strings não estão na palavra final!")
 
-
-
 print(f"""
     A primeira string tem o tamanho de: {len(string1)}
     A segunda string tem o tamanho de: {len(string2)}
@@ -23,4 +21,3 @@ print(f"""
     [-] {string1 * 3}
 """)
 check_in()
-

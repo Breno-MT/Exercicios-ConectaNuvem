@@ -1,4 +1,4 @@
-vetor_n = list(range(0,21))
+vetor_n = list(range(1,21))
 vetor_y = str(vetor_n)
 
 print(f"""

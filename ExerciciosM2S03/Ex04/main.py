@@ -9,19 +9,19 @@ def check_strings():
     carac_padrao = "-"
     nome_padrao = "Dev In House"
 
-    if carac_1 and carac_2 and nome_input == "":
+    if carac_1 == "" and carac_2 == "" and nome_input == "":
         print(f"{carac_padrao * 12} {nome_padrao:^} {carac_padrao * 12}")
     
-    elif carac_1 and carac_2 != "" and nome_input == "":
+    elif carac_1 != "" and carac_2 != "" and nome_input == "":
         print(f"{carac_1 * 12} {nome_padrao:^} {carac_2 * 12}")
     
-    elif carac_1 and nome_input != "" and carac_2 == "":
+    elif carac_1 != "" and nome_input != "" and carac_2 == "":
         print(f"{carac_1 * 12} {nome_input:^} {carac_padrao * 12}")
 
-    elif carac_2 and nome_input != "" and carac_1 == "":
+    elif carac_2 != "" and nome_input != "" and carac_1 == "":
         print(f"{carac_padrao * 12} {nome_input:^} {carac_2 * 12}")
     
-    elif carac_1 and carac_2 == "" and nome_input != "":
+    elif carac_1 == "" and carac_2 == "" and nome_input != "":
         print(f"{carac_padrao * 12} {nome_input:^} {carac_padrao * 12}")
 
     else:

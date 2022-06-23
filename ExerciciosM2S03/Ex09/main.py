@@ -38,9 +38,9 @@ class Passagens:
                 Baseado nos assentos disponíveis, digite o número do seu assento!
                 -> """))
         
-        if opcao == "n":
+        elif opcao == "n":
             print("Obrigado, espero que volte sempre!")
-            
+    
     
 
 

@@ -1,8 +1,14 @@
 class Conta:
-    def __init__(self, nome_titular, numero, saldo, saldo_limite):
+    def __init__(self, nome_titular, numero):
         self.nome_titular = nome_titular
         self.numero = numero
-        self.saldo = saldo
-        self.saldo_limite = saldo_limite
+        self.__saldo = 150
+        self.__saldo_limite = 8000
+    
 
-        
+    def __str__(self):
+        return str(self.__dict__)
+
+conta_1 = Conta('Breno', '001')
+
+print(conta_1)

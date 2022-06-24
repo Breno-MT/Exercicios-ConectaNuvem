@@ -32,11 +32,50 @@ class Conta:
             self.__saldo -= valor
         
 
+    # Função de transferência
+    def transferir(self):
+        valor = int(input("Qual o valor a ser transferido?: "))
+
+        titular = str(input("Digite o nome do titular que irá receber a transferência: "))
+        numero_titular = str(input("Digite o número do titular que irá receber a transferência: "))
+
+        global conta_escolhida
+        conta_escolhida = Conta(titular, numero_titular)
+
+
+        # Verificações de negação
+        if valor > self.__saldo:
+            print("Transferência Negada!!! Valor maior que o saldo!")
+        
+        elif valor > self.__saldo and valor > self.__saldo_limite:
+            print("Transferência Negada!!! Valor maior que o saldo e o saldo limite!")
+        
+        elif valor > self.__saldo_limite:
+            print("Transferência Negada!!! Valor maior que o limite de saldo!")
+        
+        # Verificações de validação
+        elif valor <= self.__saldo and valor <= self.__saldo_limite:
+            print(f"Transferência Efetuada!!! No valor de R${valor:.2f}!")
+            self.__saldo -= valor
+            conta_escolhida.__saldo += valor
+        
+        elif valor <= self.__saldo:
+            print(f"Transferência Efetuada!!! No valor de R${valor:.2f}!")
+            self.__saldo -= valor
+            conta_escolhida.__saldo += valor
+        
+        
+        
+
+
     # Este método especial irá printar a conta
     def __str__(self):
         return str(self.__dict__)
 
 conta_1 = Conta('Breno', '001')
 conta_1.depositar(8001)
+print(conta_1)
+conta_1.transferir()
+print(conta_1)
 
-conta_2 = Conta('Joao', '002')
+print(conta_escolhida)

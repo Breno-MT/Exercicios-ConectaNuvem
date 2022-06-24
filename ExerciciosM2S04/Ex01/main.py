@@ -5,10 +5,11 @@ class Conta:
         self.__saldo = 0
         self.__saldo_limite = 8000
     
+    # Função de Deposito 
     def depositar(self, valor):
         self.__saldo += valor
 
-
+    # Função de saque
     def saque(self, valor):
 
         # Verificações de negação
@@ -35,8 +36,7 @@ class Conta:
     def __str__(self):
         return str(self.__dict__)
 
-
 conta_1 = Conta('Breno', '001')
 conta_1.depositar(8001)
-conta_1.saque(8000)
-print(conta_1)
+
+conta_2 = Conta('Joao', '002')

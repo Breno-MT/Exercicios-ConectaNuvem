@@ -5,12 +5,8 @@ class Conta:
         self.__saldo = 0
         self.__saldo_limite = 8000
     
-
-    @property
     def depositar(self, valor):
         self.__saldo += valor
-
-
 
 
     # Este método especial irá printar a conta
@@ -19,5 +15,5 @@ class Conta:
 
 
 conta_1 = Conta('Breno', '001')
-
+conta_1.depositar(1500)
 print(conta_1)

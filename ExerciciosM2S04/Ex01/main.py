@@ -6,6 +6,7 @@ class Conta:
         self.__saldo_limite = 8000
     
 
+    # Este método especial irá printar a conta
     def __str__(self):
         return str(self.__dict__)
 

@@ -1,5 +1,5 @@
-import conta_modulo as conta
+import conta_modulo as banco
 
-conta_1 = conta.Conta('Breno', '001')
+banco.Conta('Breno', '001')
 
-conta.Conta.main_menu()
+banco.Conta.main_menu()

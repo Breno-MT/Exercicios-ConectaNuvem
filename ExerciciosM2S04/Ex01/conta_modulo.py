@@ -84,14 +84,25 @@ class Conta:
 
     # Função de chamar o menu
     def main_menu():
+
+        # Nome da conta
+        # global para poder chamar esta variavel a qualquer momento
+        global nome_conta
+        nome_conta = str(input("Digite o seu nome: "))
+
+        # Criando a conta com o nome que o usuário inseriu
+        # global para poder chamar esta variavel a qualquer momento
+        global conta_1
+        conta_1 = Conta(nome_conta, '001')
+
         while True:
-            opcao = int(input("""
+            opcao = int(input(f"""
             ___________________________________________________________________________
             |                           Olá! Bem-vindo(a) ao Conecta Banco!
             |
             |
-            |
-            |
+            |   Nome: {conta_1.nome_titular}
+            |   N. titular: {conta_1.numero}
             |
             |   [1] Saque
             |   [2] Depósito
@@ -124,3 +135,4 @@ class Conta:
     # Este método especial irá printar a conta
     def __str__(self):
         return str(f"Nome: {self.nome_titular}, N. Titular: {self.numero}, Saldo: R${self.__saldo:.2f}, Saldo Limite: R${self.__saldo_limite:.2f}")
+ 

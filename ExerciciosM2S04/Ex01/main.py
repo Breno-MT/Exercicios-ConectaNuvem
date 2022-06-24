@@ -7,21 +7,30 @@ class Conta:
         self.__saldo_limite = 8000
     
     # Função de Deposito 
-    def depositar(self, valor):
-        self.__saldo += valor
+    def depositar(self):
+        valor = float(input("Digite o valor a ser depositado R$: "))
+
+        if valor <= 0:
+            print("O valor deve ser acima de R$ 0.01 !")
+        
+        elif valor >= 0.01: 
+            print(f"Depósito no valor de R${valor:.2f}! Efetuado com sucesso!!!")
+            self.__saldo += valor
 
     # Função de saque
-    def saque(self, valor):
+    def saque(self):
+
+        valor = float(input("Digite o valor a ser sacado R$: "))
 
         # Verificações de negação
         if valor > self.__saldo:
-            print("Saque Negado!!! Valor maior que o saldo!")
+            print("Saque Negado!!! Valor maior que o saldo! Consulte o seu banco!")
         
         elif valor > self.__saldo and valor > self.__saldo_limite:
-            print("Saque Negado!!! Valor maior que o saldo e o saldo limite!")
+            print("Saque Negado!!! Valor maior que o saldo e o saldo limite! Consulte o seu banco!")
         
         elif valor > self.__saldo_limite:
-            print("Saque Negado!!! Valor maior que o limite de saldo!")
+            print("Saque Negado!!! Valor maior que o limite de saldo! Consulte o seu banco!")
         
         # Verificações de validação
         elif valor <= self.__saldo and valor <= self.__saldo_limite:
@@ -36,7 +45,7 @@ class Conta:
     def transferir(self):
 
         print("---"* 12)
-        valor = int(input("Qual o valor a ser transferido?: "))
+        valor = float(input("Qual o valor a ser transferido?: "))
 
         titular = str(input("Digite o nome do titular que irá receber a transferência: "))
         numero_titular = str(input("Digite o número do titular que irá receber a transferência: "))
@@ -60,24 +69,59 @@ class Conta:
         # Verificações de validação
         elif valor <= self.__saldo and valor <= self.__saldo_limite:
             print(f"Transferência Efetuada!!! No valor de R${valor:.2f}!")
-            print("---"* 12)
             self.__saldo -= valor
             conta_escolhida.__saldo += valor
+            print(conta_escolhida)
+            print("---"* 12)
+            
         
         elif valor <= self.__saldo:
             print(f"Transferência Efetuada!!! No valor de R${valor:.2f}!")
-            print("---"* 12)
             self.__saldo -= valor
             conta_escolhida.__saldo += valor
+            print(conta_escolhida)
+            print("---"* 12)
+            
 
     # Este método especial irá printar a conta
     def __str__(self):
         return str(f"Nome: {self.nome_titular}, N. Titular: {self.numero}, Saldo: R${self.__saldo:.2f}, Saldo Limite: R${self.__saldo_limite:.2f}")
 
 conta_1 = Conta('Breno', '001')
-conta_1.depositar(8001)
-print(conta_1)
-conta_1.transferir()
-print(conta_1)
-print("---"* 12)
-print(conta_escolhida)
+
+while True:
+    opcao = int(input("""
+     ___________________________________________________________________________
+    |                           Olá! Bem-vindo(a) ao Conecta Banco!
+    |
+    |
+    |
+    |
+    |
+    |   [1] Saque
+    |   [2] Depósito
+    |   [3] Transferência
+    |   [4] Extrato Bancário
+    |   [0] Sair
+    |    
+    |
+    |
+    |   [->] """))
+    
+    if opcao == 1:
+        opcao = conta_1.saque()
+
+    elif opcao == 2:
+        opcao = conta_1.depositar()
+
+    elif opcao == 3:
+        opcao = conta_1.transferir()
+
+    elif opcao == 4:
+        print(conta_1)
+
+    elif opcao == 0:
+        break
+
+    else:
+        print("Digite apenas uma das opções acima.")

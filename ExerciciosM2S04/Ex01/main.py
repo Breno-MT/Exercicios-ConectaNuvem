@@ -1,4 +1,5 @@
 class Conta:
+    # Métodos de inicialização da Classe
     def __init__(self, nome_titular, numero):
         self.nome_titular = nome_titular
         self.numero = numero
@@ -31,7 +32,6 @@ class Conta:
             print(f"Saque Efetuado!!! No valor de R${valor:.2f}!")
             self.__saldo -= valor
         
-
     # Função de transferência
     def transferir(self):
 
@@ -43,7 +43,6 @@ class Conta:
 
         global conta_escolhida
         conta_escolhida = Conta(titular, numero_titular)
-
 
         # Verificações de negação
         if valor > self.__saldo:
@@ -70,7 +69,6 @@ class Conta:
             print("---"* 12)
             self.__saldo -= valor
             conta_escolhida.__saldo += valor
-        
 
     # Este método especial irá printar a conta
     def __str__(self):

@@ -81,7 +81,46 @@ class Conta:
             conta_escolhida.__saldo += valor
             print(conta_escolhida)
             print("---"* 12)
+
+    # Função de chamar o menu
+    def main_menu():
+        while True:
+            opcao = int(input("""
+            ___________________________________________________________________________
+            |                           Olá! Bem-vindo(a) ao Conecta Banco!
+            |
+            |
+            |
+            |
+            |
+            |   [1] Saque
+            |   [2] Depósito
+            |   [3] Transferência
+            |   [4] Extrato Bancário
+            |   [0] Sair
+            |    
+            |
+            |
+            |   [->] """))
             
+            if opcao == 1:
+                opcao = conta_1.saque()
+
+            elif opcao == 2:
+                opcao = conta_1.depositar()
+
+            elif opcao == 3:
+                opcao = conta_1.transferir()
+
+            elif opcao == 4:
+                print(conta_1)
+
+            elif opcao == 0:
+                break
+
+            else:
+                print("Digite apenas uma das opções acima.")
+
     # Este método especial irá printar a conta
     def __str__(self):
         return str(f"Nome: {self.nome_titular}, N. Titular: {self.numero}, Saldo: R${self.__saldo:.2f}, Saldo Limite: R${self.__saldo_limite:.2f}")

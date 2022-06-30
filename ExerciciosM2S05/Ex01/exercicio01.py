@@ -74,4 +74,26 @@ class Medico(Pessoa):
         pass
 
 
+class Agenda(Medico, Paciente):
 
+    def __init__(self, cpf_paciente, crm_medico, dia, mes, ano, hora, observacao):
+        self.crm_medico = crm_medico
+        self.cpf_paciente = cpf_paciente
+        self.dia = dia
+        self.mes = mes
+        self.ano = ano
+        self.hora = hora
+        self.observacao = observacao
+
+    def cadastrar_agenda(self):
+        pass
+
+    def exibir_agenda(self):
+        pass
+
+    def salvar_agenda(self):
+        pass
+
+
+
+    

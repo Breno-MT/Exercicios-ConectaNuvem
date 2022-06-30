@@ -56,3 +56,22 @@ class Paciente(Pessoa):
         pass
 
 
+class Medico(Pessoa):
+
+    def __init__(self, nome, celular, email, crm, telefone_secundario):
+        super().__init__(nome, celular, email)
+
+        self.crm = crm
+        self.telefone_secundario = telefone_secundario
+    
+    def cadastrar_medico(self):
+        pass
+
+    def exibir_medico(self):
+        pass
+
+    def salvar_medico(self):
+        pass
+
+
+

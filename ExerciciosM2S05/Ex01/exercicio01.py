@@ -1,3 +1,6 @@
+from abc import ABC, abstractmethod
+
+
 class Endereco:
 
     def __init__(self, logradouro, numero, complemento, bairro, cidade, uf):
@@ -18,20 +21,23 @@ class Endereco:
         pass
 
 
+class Pessoa(ABC):
 
-class Pessoa:
-
+    @abstractmethod
     def __init__(self, nome, celular, email):
         self.nome = nome 
         self.celular = celular
         self.email = email
     
+    @abstractmethod
     def cadastrar_pessoa(self):
         pass
-
+    
+    @abstractmethod
     def exibir_pessoa(self):
         pass
 
+    @abstractmethod
     def salvar_pessoa(self):
         pass
 
@@ -60,7 +66,6 @@ class Medico(Pessoa):
 
     def __init__(self, nome, celular, email, crm, telefone_secundario):
         super().__init__(nome, celular, email)
-
         self.crm = crm
         self.telefone_secundario = telefone_secundario
     
@@ -75,16 +80,16 @@ class Medico(Pessoa):
 
 
 class Agenda(Medico, Paciente):
-
-    def __init__(self, cpf_paciente, crm_medico, dia, mes, ano, hora, observacao):
-        self.crm_medico = crm_medico
+    def __init__(self, crm, crm_medico, cpf_paciente, dia, mes, ano, hora, observacao):
+        super().__init__(crm)
+        self.crm_medico = crm
         self.cpf_paciente = cpf_paciente
         self.dia = dia
         self.mes = mes
         self.ano = ano
         self.hora = hora
         self.observacao = observacao
-
+    
     def cadastrar_agenda(self):
         pass
 
@@ -96,4 +101,3 @@ class Agenda(Medico, Paciente):
 
 
 
-    

@@ -1,5 +1,7 @@
 from abc import ABC, abstractmethod
+import json
 
+from matplotlib.font_manager import json_dump
 
 class Endereco:
 
@@ -12,8 +14,15 @@ class Endereco:
         self.uf = uf
     
     def cadastrar_endereco(self):
-        pass
 
+        lista_endereco = {"logradouro": self.logradouro,
+        "numero": self.numero,
+        "complemento": self.complemento,
+        "bairro": self.bairro,
+        "cidade": self.cidade,
+        "uf": self.uf}
+        
+        
     def exibir_endereco(self):
         pass
 

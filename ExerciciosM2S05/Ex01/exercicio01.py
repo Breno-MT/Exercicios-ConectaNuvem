@@ -1,8 +1,6 @@
 from abc import ABC, abstractmethod
 import json
 
-from matplotlib.font_manager import json_dump
-
 class Endereco:
 
     def __init__(self, logradouro, numero, complemento, bairro, cidade, uf):

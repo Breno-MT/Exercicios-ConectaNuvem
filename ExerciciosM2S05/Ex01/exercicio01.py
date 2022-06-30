@@ -19,3 +19,20 @@ class Endereco:
 
 
 
+class Pessoa:
+
+    def __init__(self, nome, celular, email):
+        self.nome = nome 
+        self.celular = celular
+        self.email = email
+    
+    def cadastrar_pessoa(self):
+        pass
+
+    def exibir_pessoa(self):
+        pass
+
+    def salvar_pessoa(self):
+        pass
+
+

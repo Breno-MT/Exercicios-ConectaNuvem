@@ -36,3 +36,23 @@ class Pessoa:
         pass
 
 
+class Paciente(Pessoa):
+
+    def __init__(self, nome, celular, email, rg, cpf, telefone, convenio, data_de_nascimento):
+        super().__init__(nome, celular, email)
+        self.rg = rg
+        self.cpf = cpf
+        self.telefone = telefone
+        self.convenio = convenio
+        self.data_de_nascimento = data_de_nascimento
+
+    def cadastrar_paciente(self):
+        pass
+
+    def exibir_paciente(self):
+        pass
+
+    def salvar_paciente(self):
+        pass
+
+

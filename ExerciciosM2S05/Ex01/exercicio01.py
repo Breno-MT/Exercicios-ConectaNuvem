@@ -86,10 +86,9 @@ class Medico(Pessoa):
         pass
 
 
-class Agenda(Medico, Paciente):
-    def __init__(self, crm, crm_medico, cpf_paciente, dia, mes, ano, hora, observacao):
-        super().__init__(crm)
-        self.crm_medico = crm
+class Agenda(Medico):
+    def __init__(self, crm_medico, cpf_paciente, dia, mes, ano, hora, observacao):
+        self.crm_medico = crm_medico
         self.cpf_paciente = cpf_paciente
         self.dia = dia
         self.mes = mes
@@ -105,6 +104,5 @@ class Agenda(Medico, Paciente):
 
     def salvar_agenda(self):
         pass
-
 
 

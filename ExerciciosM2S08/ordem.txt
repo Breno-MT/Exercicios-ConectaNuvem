@@ -1,0 +1,8 @@
+Esta é a ordem de execução dos insert values.
+
+1 - DEPARTAMENTOS
+2 - CURSOS
+3 - DISCIPLINA
+4 - MATRIZES CURSOS
+5 - ALUNOS
+6 - MATRICULAS

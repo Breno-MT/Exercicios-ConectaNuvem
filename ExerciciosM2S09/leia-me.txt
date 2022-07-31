@@ -1,0 +1,18 @@
+Requerimentos:
+Flask
+TinyDB
+
+
+http:127.0.0.1:5000/users -> Usando o método GET aparece todos os usuarios do DB.
+
+http:127.0.0.1:5000/users/<id> -> Usando o método GET e colocando um id especifico aparece um usuário.
+
+http:127.0.0.1:5000/users/create -> Usando o método POST e passando no body as especificações
+{
+ "cpf": 123,
+ "nome": "Teste",
+ "email": "teste@teste.com"
+}
+-> Você cria um usuário com id unico.
+
+http:127.0.0.1:5000/users/<id> -> Usando o método DELETE você excluí um usuario especifico.

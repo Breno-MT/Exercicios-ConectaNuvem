@@ -1,6 +1,6 @@
 from flask import Blueprint, request, jsonify
 
-from src.app.db import db
+from src.app.db import db, Find
 from src.app.utils import exists_key
 
 users = Blueprint('users', __name__, url_prefix="/users")
@@ -37,7 +37,18 @@ def create_user():
 
         return {"id": insert, "user": data}, 202
 
-@users.route("/delete/<string:id>", methods = ["DELETE"])
-def delete_user():
-    pass
+@users.route("/<string:id>", methods = ["DELETE"])
+def delete_user(id: str):
+
+    if id.isnumeric():
+        user = db.get(doc_id=id)
+
+        if user:
+            db.remove(Find["cpf"] == user["cpf"])
+
+            return {"success": "Usuário removido com sucesso", "usuario": user}, 200
+        
+        return jsonify({"error": "Usuário não encontrado"}, 404)
+    
+    return jsonify({"error": "Passe o id como númerico e tente novamente."})
     
